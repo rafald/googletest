@@ -1,0 +1,32 @@
+project :
+  requirements 
+     <library>..//gmock <cxxflags>"-ftemplate-depth=256 " 
+     <include>../../googletest # required by gmock-generated-internal-utils_test.cc
+;
+
+if TRUE
+{
+	run gmock_all_test.cc ; # runs all tests from one file, easy to maintain /else branch runs individually/
+}
+else
+{
+	run gmock-actions_test.cc ;
+	run gmock-cardinalities_test.cc ;
+	run gmock_ex_test.cc ;
+	run gmock-generated-actions_test.cc ;
+	run gmock-generated-function-mockers_test.cc ;
+	run gmock-generated-internal-utils_test.cc ;
+	run gmock-generated-matchers_test.cc ;
+	run gmock-internal-utils_test.cc ;
+	run gmock_leak_test_.cc ;
+	run gmock_link2_test.cc ;
+	run gmock_link_test.cc ;
+	run gmock-matchers_test.cc ;
+	run gmock-more-actions_test.cc ;
+	run gmock-nice-strict_test.cc ;
+	run gmock_output_test_.cc ;
+	run gmock-port_test.cc ;
+	run gmock-spec-builders_test.cc ;
+	run gmock_stress_test.cc ;
+	run gmock_test.cc ;
+}

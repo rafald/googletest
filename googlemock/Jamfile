@@ -1,0 +1,14 @@
+project 
+        : usage-requirements <include>include
+        : requirements       <include>include <include>. <threading>multi <cxxflags>"-std=c++11 " <library>../googletest//gtest
+        : source-location src
+        : build-dir ../build
+;
+
+lib gmock : [ glob *.cc : gmock-all.cc ] 
+  : 
+  : <threading>multi # default
+;
+
+build-project test ;
+

@@ -1,0 +1,55 @@
+project :
+  requirements 
+     <library>..//gtest <cxxflags>"-ftemplate-depth=256 " 
+;
+
+if TRUE 
+{
+	run gtest_all_test.cc ; # this branch runs all tests via one file #including all tests
+}
+else
+{
+	run gtest_break_on_failure_unittest_.cc ;
+	run gtest_catch_exceptions_test_.cc ;
+	run gtest_color_test_.cc ;
+	run gtest-death-test_ex_test.cc ;
+	run gtest-death-test_test.cc ;
+	run gtest_environment_test.cc ;
+	run gtest_env_var_test_.cc ;
+	run gtest-filepath_test.cc ;
+	run gtest_filter_unittest_.cc ;
+	run gtest_help_test_.cc ;
+	run gtest-linked_ptr_test.cc ;
+	run gtest-listener_test.cc ;
+	run gtest_list_tests_unittest_.cc ;
+	run gtest_main_unittest.cc ;
+	run gtest-message_test.cc ;
+	run gtest_no_test_unittest.cc ;
+	run gtest-options_test.cc ;
+	run gtest_output_test_.cc ;
+	run gtest-param-test2_test.cc ;
+	run gtest-param-test_test.cc ;
+	run gtest-port_test.cc ;
+	run gtest_pred_impl_unittest.cc ;
+	run gtest_premature_exit_test.cc ;
+	run gtest-printers_test.cc ;
+	run gtest_prod_test.cc ;
+	run gtest_repeat_test.cc ;
+	run gtest_shuffle_test_.cc ;
+	run gtest_sole_header_test.cc ;
+	run gtest_stress_test.cc ;
+	run gtest-test-part_test.cc ;
+	run gtest_throw_on_failure_ex_test.cc ;
+	run gtest_throw_on_failure_test_.cc ;
+	run gtest-tuple_test.cc ;
+	run gtest-typed-test2_test.cc ;
+	run gtest-typed-test_test.cc ;
+	run gtest_uninitialized_test_.cc ;
+	run gtest-unittest-api_test.cc ;
+	run gtest_unittest.cc ;
+	run gtest_xml_outfile1_test_.cc ;
+	run gtest_xml_outfile2_test_.cc ;
+	run gtest_xml_output_unittest_.cc ;
+	run production.cc ;
+}
+

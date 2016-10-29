@@ -1,0 +1,14 @@
+project 
+        : usage-requirements <include>include
+        : requirements       <include>include <include>. <threading>multi <cxxflags>"-std=c++11 "
+        : source-location src
+        : build-dir ../build
+;
+
+lib gtest : [ glob *.cc : gtest-all.cc ] 
+   :
+   : <threading>multi # default
+;
+
+build-project test ;
+
